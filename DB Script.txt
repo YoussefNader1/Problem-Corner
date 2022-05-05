@@ -1,0 +1,45 @@
+
+CREATE TABLE userTable(userID NUMBER(5) primary key,
+		userName 	VARCHAR2(14),
+		userPassword 	VARCHAR2(14));
+
+create table posts (PostID number(5) primary key,
+postContent varchar2(250),
+userID number(5) references userTable (userID));
+
+create table Coomment (CommentID number(5) primary key,
+commentContent varchar2(250),
+PostID number(5) references posts(PostID));
+
+create table AdminTable (AdminID number(5) primary key,
+AdminName varchar2(15),
+AdminPassword varchar2(15));
+
+insert into usertable values(1,'Abanoub','123456');
+
+insert into posts values(1,'How to Add two Numbers ?',1);
+
+insert into coomment values(1,'use x+y and it will work',1);
+
+
+
+
+
+
+
+create or replace procedure getPosts(u in VARCHAR2,pass in VARCHAR2,Idd out NUMBER)
+as
+begin
+SELECT usertable.userid
+into idd
+from usertable
+where usertable.username =  u and usertable.userpassword = pass;
+end;
+
+create or replace procedure viewposts(idd VARCHAR2,CID out sys_refcursor)
+as begin 
+open CID  for
+select postcontent
+from posts
+where posts.userid = idd;
+end;
