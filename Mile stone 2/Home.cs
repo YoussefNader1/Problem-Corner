@@ -25,6 +25,10 @@ namespace Mile_stone_2
             id = x;
         }
 
+        public Home()
+        {
+        }
+
         private void Home_Load(object sender, EventArgs e)
         {
             dt = new DataTable();
@@ -45,6 +49,13 @@ namespace Mile_stone_2
 
         private void label1_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Add_Post_Form Addbtn = new  Add_Post_Form(id);
+            Addbtn.Show();
 
         }
     }

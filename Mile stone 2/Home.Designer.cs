@@ -30,6 +30,7 @@
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
+            this.btn_Add_Homeform = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,11 +55,22 @@
             this.label1.Text = "Your Posts";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
+            // btn_Add_Homeform
+            // 
+            this.btn_Add_Homeform.Location = new System.Drawing.Point(839, 41);
+            this.btn_Add_Homeform.Name = "btn_Add_Homeform";
+            this.btn_Add_Homeform.Size = new System.Drawing.Size(97, 30);
+            this.btn_Add_Homeform.TabIndex = 2;
+            this.btn_Add_Homeform.Text = "Add";
+            this.btn_Add_Homeform.UseVisualStyleBackColor = true;
+            this.btn_Add_Homeform.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(804, 483);
+            this.ClientSize = new System.Drawing.Size(1037, 483);
+            this.Controls.Add(this.btn_Add_Homeform);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
             this.Name = "Home";
@@ -73,5 +85,6 @@
         #endregion
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btn_Add_Homeform;
     }
 }

@@ -10,38 +10,33 @@ using System.Windows.Forms;
 using Oracle.DataAccess.Client;
 using Oracle.DataAccess.Types;
 
-
 namespace Mile_stone_2
 {
-    public partial class Form1 : Form
+    public partial class Add_Post_Form : Form
     {
         String ordb = "Data source=orcl; user id=scott;Password=tiger;";
-
+        int id;
         OracleConnection con;
-        public Form1()
+        public Add_Post_Form(int userId)
         {
             InitializeComponent();
+            id = userId;
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void btn_AddPost_Click(object sender, EventArgs e)
         {
-            con = new OracleConnection(ordb);
-            con.Open();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            if (txt_name.Text =="" || txt_password.Text == "") 
+            if (txt_AddPost.Text == "" )
             {
-                MessageBox.Show("Fild is empty");
+                MessageBox.Show("Field is empty");
                 return;
             }
             OracleCommand cmd = new OracleCommand();
             cmd.Connection = con;
-            cmd.CommandText = "insert into usertable values(:id,:name,:pass)";
+            cmd.CommandText = "insert into posts values(:POSTID,:POSTCONTENT,:USERID)";
+            
             OracleCommand cmd1 = new OracleCommand();
             cmd1.Connection = con;
-            cmd1.CommandText = "select max(userid) from usertable ";
+            cmd1.CommandText = "select max(POSTID) from posts ";
             OracleDataReader dr = cmd1.ExecuteReader();
             int max = 0;
             try
@@ -53,29 +48,30 @@ namespace Mile_stone_2
             {
                 max = 0;
             }
-           int newid = max + 1;
-            cmd.Parameters.Add("id", newid);
-            cmd.Parameters.Add("name", txt_name.Text);
-            cmd.Parameters.Add("gender", txt_password.Text);
+            int newid = max + 1;
+            cmd.Parameters.Add("POSTID", newid);
+            cmd.Parameters.Add("POSTCONTENT", txt_AddPost.Text);
+            cmd.Parameters.Add("USERID", id);
 
             int r = cmd.ExecuteNonQuery();
             if (r != -1)
             {
-                MessageBox.Show("User added");
+                MessageBox.Show("Post added");
 
-                Login l = new Login();
+                Home l = new Home(id);
                 l.Show();
                 Hide();
             }
             else
             {
-                MessageBox.Show("Please choose new username");
+                MessageBox.Show("Please add something");
             }
         }
 
-        private void txt_name_TextChanged(object sender, EventArgs e)
+        private void Add_Post_Form_Load(object sender, EventArgs e)
         {
-
+            con = new OracleConnection(ordb);
+            con.Open();
         }
     }
 }
