@@ -24,7 +24,6 @@ namespace Mile_stone_2
             InitializeComponent();
             id = x;
         }
-
         public Home()
         {
         }
@@ -57,7 +56,6 @@ namespace Mile_stone_2
             Add_Post_Form Addbtn = new  Add_Post_Form(id);
             Addbtn.Show();
             Hide();
-
         }
 
         private void button1_Click_1(object sender, EventArgs e)
@@ -65,6 +63,11 @@ namespace Mile_stone_2
             Login l = new Login();
             l.Show();
             Hide();
+        }
+
+        private void Home_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            conn.Dispose();
         }
     }
 }

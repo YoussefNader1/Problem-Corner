@@ -17,7 +17,7 @@ namespace Mile_stone_2
         OracleDataAdapter adabter;
         OracleCommandBuilder builder;
         DataSet ds;
-        String constr = "Data source=orcl; user id=scott;Password=tiger;";
+        String constr = "Data source=orcl; user id=hr;Password=hr;";
         string cmdstr = "";
         object s;
         EventArgs e;
@@ -74,6 +74,11 @@ namespace Mile_stone_2
         }
 
         private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }

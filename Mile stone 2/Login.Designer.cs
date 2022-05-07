@@ -39,23 +39,25 @@
             // 
             // txt_user
             // 
-            this.txt_user.Location = new System.Drawing.Point(328, 71);
+            this.txt_user.Location = new System.Drawing.Point(326, 44);
             this.txt_user.Name = "txt_user";
             this.txt_user.Size = new System.Drawing.Size(195, 22);
             this.txt_user.TabIndex = 0;
             // 
             // txt_password
             // 
-            this.txt_password.Location = new System.Drawing.Point(328, 140);
+            this.txt_password.Location = new System.Drawing.Point(326, 113);
             this.txt_password.Name = "txt_password";
+            this.txt_password.PasswordChar = '*';
             this.txt_password.Size = new System.Drawing.Size(195, 22);
             this.txt_password.TabIndex = 1;
+            this.txt_password.UseSystemPasswordChar = true;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(204, 71);
+            this.label1.Location = new System.Drawing.Point(202, 44);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(102, 25);
             this.label1.TabIndex = 2;
@@ -65,7 +67,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(204, 136);
+            this.label2.Location = new System.Drawing.Point(202, 109);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(98, 25);
             this.label2.TabIndex = 3;
@@ -73,7 +75,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(344, 223);
+            this.button1.Location = new System.Drawing.Point(341, 178);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(142, 35);
             this.button1.TabIndex = 4;
@@ -83,7 +85,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(640, 353);
+            this.button2.Location = new System.Drawing.Point(640, 262);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(83, 31);
             this.button2.TabIndex = 5;
@@ -95,7 +97,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(595, 387);
+            this.label3.Location = new System.Drawing.Point(595, 296);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(175, 17);
             this.label3.TabIndex = 6;
@@ -107,7 +109,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 335);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -117,6 +119,7 @@
             this.Controls.Add(this.txt_user);
             this.Name = "Login";
             this.Text = "Login";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Login_FormClosing);
             this.Load += new System.EventHandler(this.Login_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

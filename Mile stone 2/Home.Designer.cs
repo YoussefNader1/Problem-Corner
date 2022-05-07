@@ -38,7 +38,7 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 41);
+            this.dataGridView1.Location = new System.Drawing.Point(134, 55);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
@@ -49,7 +49,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(281, 12);
+            this.label1.Location = new System.Drawing.Point(408, 16);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(213, 26);
             this.label1.TabIndex = 1;
@@ -58,17 +58,17 @@
             // 
             // btn_Add_Homeform
             // 
-            this.btn_Add_Homeform.Location = new System.Drawing.Point(817, 41);
+            this.btn_Add_Homeform.Location = new System.Drawing.Point(12, 12);
             this.btn_Add_Homeform.Name = "btn_Add_Homeform";
             this.btn_Add_Homeform.Size = new System.Drawing.Size(97, 30);
             this.btn_Add_Homeform.TabIndex = 2;
-            this.btn_Add_Homeform.Text = "Add";
+            this.btn_Add_Homeform.Text = "Add Post";
             this.btn_Add_Homeform.UseVisualStyleBackColor = true;
             this.btn_Add_Homeform.Click += new System.EventHandler(this.button1_Click);
             // 
             // btn_Logout_from_home
             // 
-            this.btn_Logout_from_home.Location = new System.Drawing.Point(929, 437);
+            this.btn_Logout_from_home.Location = new System.Drawing.Point(951, 485);
             this.btn_Logout_from_home.Name = "btn_Logout_from_home";
             this.btn_Logout_from_home.Size = new System.Drawing.Size(96, 30);
             this.btn_Logout_from_home.TabIndex = 3;
@@ -80,13 +80,15 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1037, 483);
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ClientSize = new System.Drawing.Size(1059, 527);
             this.Controls.Add(this.btn_Logout_from_home);
             this.Controls.Add(this.btn_Add_Homeform);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
             this.Name = "Home";
             this.Text = "Home";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Home_FormClosing);
             this.Load += new System.EventHandler(this.Home_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

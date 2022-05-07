@@ -43,5 +43,9 @@ namespace Mile_stone_2
             Hide();
 
         }
+
+        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+        }
     }
 }

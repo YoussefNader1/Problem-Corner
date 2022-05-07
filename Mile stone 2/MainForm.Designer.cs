@@ -44,7 +44,7 @@ namespace Mile_stone_2
             this.toolStripMenuItem1});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(678, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -65,19 +65,19 @@ namespace Mile_stone_2
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(86, 131);
+            this.button1.Location = new System.Drawing.Point(62, 80);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(194, 170);
+            this.button1.Size = new System.Drawing.Size(254, 55);
             this.button1.TabIndex = 1;
-            this.button1.Text = "Show Your Post or make Account ";
+            this.button1.Text = "Show Your Posts or Make an Account ";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(415, 131);
+            this.button2.Location = new System.Drawing.Point(386, 80);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(194, 170);
+            this.button2.Size = new System.Drawing.Size(178, 55);
             this.button2.TabIndex = 2;
             this.button2.Text = "Search By Post";
             this.button2.UseVisualStyleBackColor = true;
@@ -87,13 +87,15 @@ namespace Mile_stone_2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ClientSize = new System.Drawing.Size(678, 179);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainForm";
             this.Text = "MainForm";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

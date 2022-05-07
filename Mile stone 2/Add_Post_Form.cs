@@ -64,7 +64,7 @@ namespace Mile_stone_2
             }
             else
             {
-                MessageBox.Show("Please add something");
+                MessageBox.Show("Please Add Something");
             }
         }
 
@@ -77,6 +77,11 @@ namespace Mile_stone_2
         private void txt_AddPost_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void Add_Post_Form_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            con.Dispose();
         }
     }
 }

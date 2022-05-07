@@ -69,13 +69,23 @@ namespace Mile_stone_2
             }
             else
             {
-                MessageBox.Show("Please choose new username");
+                MessageBox.Show("Please Choose Another Username");
             }
         }
 
         private void txt_name_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            con.Dispose();
         }
     }
 }
