@@ -31,19 +31,21 @@ namespace Mile_stone_2
         {
             this.txt_AddPost = new System.Windows.Forms.TextBox();
             this.btn_AddPost = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txt_AddPost
             // 
-            this.txt_AddPost.Location = new System.Drawing.Point(189, 98);
+            this.txt_AddPost.Location = new System.Drawing.Point(15, 57);
             this.txt_AddPost.Multiline = true;
             this.txt_AddPost.Name = "txt_AddPost";
-            this.txt_AddPost.Size = new System.Drawing.Size(428, 74);
+            this.txt_AddPost.Size = new System.Drawing.Size(480, 111);
             this.txt_AddPost.TabIndex = 0;
+            this.txt_AddPost.TextChanged += new System.EventHandler(this.txt_AddPost_TextChanged);
             // 
             // btn_AddPost
             // 
-            this.btn_AddPost.Location = new System.Drawing.Point(347, 226);
+            this.btn_AddPost.Location = new System.Drawing.Point(388, 195);
             this.btn_AddPost.Name = "btn_AddPost";
             this.btn_AddPost.Size = new System.Drawing.Size(107, 33);
             this.btn_AddPost.TabIndex = 1;
@@ -51,11 +53,21 @@ namespace Mile_stone_2
             this.btn_AddPost.UseVisualStyleBackColor = true;
             this.btn_AddPost.Click += new System.EventHandler(this.btn_AddPost_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(12, 20);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(138, 17);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Enter your post here";
+            // 
             // Add_Post_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(519, 270);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_AddPost);
             this.Controls.Add(this.txt_AddPost);
             this.Name = "Add_Post_Form";
@@ -70,5 +82,6 @@ namespace Mile_stone_2
 
         private System.Windows.Forms.TextBox txt_AddPost;
         private System.Windows.Forms.Button btn_AddPost;
+        private System.Windows.Forms.Label label1;
     }
 }

@@ -73,5 +73,10 @@ namespace Mile_stone_2
             con = new OracleConnection(ordb);
             con.Open();
         }
+
+        private void txt_AddPost_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

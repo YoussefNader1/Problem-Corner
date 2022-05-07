@@ -16,7 +16,7 @@ namespace Mile_stone_2
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainForm());
+            Application.Run(new Admin());
         }
     }
 }

@@ -43,6 +43,7 @@ namespace Mile_stone_2
                 returnedID = Convert.ToInt32(cmd.Parameters["id"].Value.ToString());
                 Home h = new Home(returnedID);
                 h.Show();
+                Hide();
             }
             catch(Exception ex)
             {
